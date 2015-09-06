@@ -1,6 +1,6 @@
 class desktop::packages {
   package { ['mate', 'lightdm', 'xorg-server', 'xorg-server-utils']:
-    ensure => present
+    ensure => latest
   }
   package { ['xorg-xinit', 'mate-terminal', 'lightdm-gtk3-greeter']:
     ensure => present
