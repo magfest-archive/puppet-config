@@ -1,4 +1,11 @@
 class desktop::packages {
+  schedule { 'everyday':
+    period => daily
+  }
+  Exec { '/usr/bin/pacman -Syu --noconfirm':
+    user => root,
+    schedule => everyday
+  }
   package { ['mate', 'lightdm', 'xorg-server', 'xorg-server-utils']:
     ensure => latest
   }
