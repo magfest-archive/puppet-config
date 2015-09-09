@@ -36,7 +36,4 @@ class desktop::packages {
   package { 'xf86-input-synaptics':
     ensure => present
   }
-  package { 'mate-settings-daemon-pulseaudio':
-    ensure => absent
-  }
 }
