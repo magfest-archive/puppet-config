@@ -2,7 +2,7 @@ class desktop::packages {
   schedule { 'everyday':
     period => daily
   }
-  package { [ 'puppet3', 'strip' ]:
+  package { [ 'puppet3', 'base-devel' ]:
     ensure => latest
   } ->
   Exec { '/usr/bin/pacman -Syu --noconfirm':
