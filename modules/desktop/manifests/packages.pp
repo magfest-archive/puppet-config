@@ -5,7 +5,7 @@ class desktop::packages {
   package { [ 'puppet3', 'base-devel' ]:
     ensure => latest
   } ->
-  Exec { '/usr/bin/pacman -Syu --noconfirm':
+  exec { '/usr/bin/pacman -Syu --noconfirm':
     user => root,
     schedule => everyday
   }
