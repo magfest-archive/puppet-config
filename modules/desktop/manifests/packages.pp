@@ -10,7 +10,7 @@ class desktop::packages {
     schedule => everyday
   }
   package { ['mate', 'lightdm', 'xorg-server', 'xorg-server-utils']:
-    ensure => latest
+    ensure => present
   }
   package { ['xorg-xinit', 'mate-terminal', 'lightdm-gtk3-greeter']:
     ensure => present
