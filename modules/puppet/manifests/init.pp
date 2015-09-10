@@ -8,6 +8,6 @@ class puppet {
   }
   exec { '/usr/bin/rm -f /var/lib/pacman/db.lck':
     unless => '/usr/bin/pgrep pacman',
-    onlyif => "test -f /var/lib/pacman/db.lck"
+    onlyif => "/usr/bin/test -f /var/lib/pacman/db.lck"
   }
 }
