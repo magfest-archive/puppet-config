@@ -7,6 +7,7 @@ class puppet {
     enable => true
   }
   exec { '/usr/bin/rm -f /var/lib/pacman/db.lck':
-    unless => '/usr/bin/pgrep pacman'
+    unless => '/usr/bin/pgrep pacman',
+    onlyif => "test -f /var/lib/pacman/db.lck"
   }
 }
