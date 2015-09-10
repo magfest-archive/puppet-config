@@ -15,7 +15,7 @@ class desktop::packages {
   package { ['mate', 'lightdm', 'xorg-server', 'xorg-server-utils']:
     ensure => present
   }
-  package { ['xorg-xinit', 'mate-terminal']:
+  package { ['xorg-xinit', 'mate-terminal', 'bind-tools']:
     ensure => present
   }
   package { ['xorg-xrandr', 'mate-extra', 'yelp', 'curl']:
