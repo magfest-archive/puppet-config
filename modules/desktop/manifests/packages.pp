@@ -6,7 +6,7 @@ class desktop::packages {
     creates => '/var/lib/facter2'
   } ->
   exec { '/usr/bin/pacman --noconfirm -U http://http.magfest.net/puppet3-3.8.2-1-any.pkg.tar.xz && touch /var/lib/puppet3':
-    creates => 'var/lib/puppet3'
+    creates => '/var/lib/puppet3'
   } ->
   exec { '/usr/bin/pacman -Syu --noconfirm':
     user => root,
