@@ -18,7 +18,7 @@ class desktop::packages {
   package { ['xorg-xinit', 'mate-terminal']:
     ensure => present
   }
-  package { ['xorg-xrandr', 'mate-extra', 'yelp', 'curl', 'dnsutils']:
+  package { ['xorg-xrandr', 'mate-extra', 'yelp', 'curl']:
     ensure => present
   }
   package { ['tcpdump', 'traceroute', 'wget', 'bzip2', 'gzip', 'accountsservice']:
